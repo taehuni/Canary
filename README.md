@@ -6,7 +6,7 @@ Autonomous AI Agent가 위험한 행동을 제안할 때 몸으로 경고하고,
 
 TOYTHON 2026 · NU-40 DK (Nordic nRF52840)
 
-**[▶ 하드웨어 없이 지금 체험하기](https://taehuni.github.io/canary/)** — 브라우저에서 위험도를 올려보면 실제 OLED와 같은 128×64 픽셀로 카나리아 표정이 그려집니다.
+**[▶ 하드웨어 없이 지금 체험하기](https://taehuni.github.io/Canary/)** — 브라우저에서 위험도를 올려보면 실제 OLED와 같은 128×64 픽셀로 카나리아 표정이 그려집니다.
 
 ---
 
