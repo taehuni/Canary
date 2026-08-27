@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CANARY 표정 시뮬레이터</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+
+  <header>
+    <p class="kicker">CANARY · OLED 128×64</p>
+    <h1>표정 시뮬레이터</h1>
+    <p class="lede">보드 없이 표정을 설계합니다. 실제 OLED와 같은 128×64 픽셀로 그려지고,
+      아래에 그대로 붙여넣을 Arduino 코드가 나옵니다.</p>
+  </header>
+
+  <div class="lab">
+
+    <div class="screen-wrap">
+      <div class="bezel"><span>SSD1306 · 128×64</span><span id="fps">—</span></div>
+      <canvas id="oled" width="640" height="320" aria-label="OLED 표정 미리보기"></canvas>
+      <div class="readout">
+        <span>eye_r <b id="r-r">6</b></span>
+        <span>jitter <b id="r-j">0</b></span>
+        <span>blink <b id="r-b">open</b></span>
+        <span>face <b id="r-f">calm</b></span>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel">
+        <p class="plabel">Stress Level</p>
+        <div class="stressline">
+          <span class="stressval" id="sv">0</span>
+          <span class="tierbadge" id="tb" style="background:var(--calm)">CALM</span>
+        </div>
+        <input type="range" id="stress" min="0" max="100" value="0" aria-label="위험도">
+        <div class="ticks">
+          <span>0</span><span>25</span><span>55</span><span>80</span><span>100</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <p class="plabel">표정 강제 지정</p>
+        <div class="btns" id="faces">
+          <button data-f="auto" aria-pressed="true">AUTO</button>
+          <button data-f="calm" aria-pressed="false">CALM</button>
+          <button data-f="alert" aria-pressed="false">ALERT</button>
+          <button data-f="tense" aria-pressed="false">TENSE</button>
+          <button data-f="alarm" aria-pressed="false">ALARM</button>
+          <button data-f="locked" aria-pressed="false">LOCKED</button>
+          <button data-f="sleep" aria-pressed="false">SLEEP</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <p class="plabel">애니메이션</p>
+        <label class="tg"><input type="checkbox" id="t-blink" checked><span>깜빡임 <em>3s / 120ms</em></span></label>
+        <label class="tg"><input type="checkbox" id="t-jit" checked><span>긴장 떨림 <em>stress ≥ 80</em></span></label>
+        <label class="tg"><input type="checkbox" id="t-lerp" checked><span>부드러운 전환 <em>lerp 0.18</em></span></label>
+        <label class="tg"><input type="checkbox" id="t-idle" checked><span>시선 이동 <em>idle drift</em></span></label>
+        <label class="tg"><input type="checkbox" id="t-sleep" checked><span>자동 수면 <em>stress 0 · 30s idle</em></span></label>
+        <label class="tg"><input type="checkbox" id="t-hud" checked><span>상단 RISK 텍스트</span></label>
+      </div>
+
+      <div class="panel">
+        <p class="plabel">일회형 연출</p>
+        <button class="fire" id="fire">▶ 놀람 재생 (easeOutBack)</button>
+      </div>
+    </div>
+
+  </div>
+
+  <section>
+    <h2>지금 설정의 Arduino 코드</h2>
+    <p>슬라이더와 토글을 바꾸면 이 코드도 같이 바뀝니다.</p>
+    <button class="copy" id="copy">코드 복사</button>
+    <pre id="out"></pre>
+  </section>
+
+</div>
+
+<!-- ES 모듈을 쓰지 않는다. file:// 로 열려야 하기 때문. -->
+<script src="params.js"></script>
+<script src="sim.js"></script>
+</body>
+</html>
