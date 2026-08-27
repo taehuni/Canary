@@ -1,0 +1,15 @@
+# 저장소 안에서는 항상 LF로 보관한다.
+# 윈도우에서 작업해도 커밋되는 내용은 동일해진다.
+* text=auto eol=lf
+
+# 바이너리 — 절대 변환하지 않는다
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.mp4  binary
+*.pdf  binary
+
+# GitHub 언어 통계에서 데모용 더미 데이터는 제외
+host/fake_repo_seed/** linguist-generated=true
