@@ -35,6 +35,14 @@ flowchart LR
     E --> G[격리된 fake_repo에서 실행]
 ```
 
+## 실제 하드웨어 시연
+
+[![CANARY 실제 하드웨어 시연 영상](docs/canary-demo-cover.jpg)](docs/canary-hardware-demo.mp4)
+
+**[▶ CANARY 하드웨어 시연 영상 보기 (29초)](docs/canary-hardware-demo.mp4)**
+
+웹 화면에서 작업을 제안하고, 위험도에 따라 실제 장치의 OLED 표정이 달라지는 과정을 촬영한 영상입니다. 브라우저 호환성을 위해 원본 영상을 H.264 형식으로 변환했습니다.
+
 ## 프로젝트 상태
 
 > **Status: Hackathon Prototype / Archived**
