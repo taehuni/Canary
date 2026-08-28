@@ -23,8 +23,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Prepare site
+        run: |
+          mkdir -p _site/media
+          cp -R sim/. _site/
+          cp docs/canary-hardware-demo.mp4 _site/media/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: sim
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
