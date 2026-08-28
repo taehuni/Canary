@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+  <title id="title">CANARY project banner</title>
+  <desc id="desc">A physical safety interface for autonomous AI actions, represented by a yellow canary face on an OLED display.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#070b12"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fde047" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="460" rx="28" fill="url(#bg)"/>
+  <circle cx="1010" cy="82" r="250" fill="url(#glow)"/>
+  <circle cx="108" cy="392" r="180" fill="#facc15" opacity=".035"/>
+
+  <g transform="translate(72 74)">
+    <rect width="150" height="34" rx="17" fill="#facc15"/>
+    <text x="75" y="22" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.2">TOYTHON 2026</text>
+    <text x="0" y="116" fill="#ffffff" font-family="Arial, sans-serif" font-size="78" font-weight="800" letter-spacing="5">CANARY</text>
+    <text x="2" y="166" fill="#facc15" font-family="Arial, sans-serif" font-size="23" font-weight="600">Miners had canaries. Autonomous AI needs one too.</text>
+    <text x="2" y="215" fill="#a8b3c7" font-family="Arial, sans-serif" font-size="19">A physical approval interface for risky AI actions</text>
+
+    <g transform="translate(0 256)" font-family="Arial, sans-serif" font-size="14" font-weight="700">
+      <rect width="132" height="38" rx="10" fill="#1f2937" stroke="#374151"/>
+      <circle cx="22" cy="19" r="5" fill="#22c55e"/>
+      <text x="36" y="24" fill="#e5e7eb">DETECT RISK</text>
+      <path d="M142 19h34" stroke="#64748b" stroke-width="2"/>
+      <path d="m171 14 7 5-7 5" fill="none" stroke="#64748b" stroke-width="2"/>
+      <rect x="188" width="124" height="38" rx="10" fill="#1f2937" stroke="#374151"/>
+      <circle cx="210" cy="19" r="5" fill="#facc15"/>
+      <text x="224" y="24" fill="#e5e7eb">WARN HUMAN</text>
+      <path d="M322 19h34" stroke="#64748b" stroke-width="2"/>
+      <path d="m351 14 7 5-7 5" fill="none" stroke="#64748b" stroke-width="2"/>
+      <rect x="368" width="148" height="38" rx="10" fill="#1f2937" stroke="#374151"/>
+      <circle cx="390" cy="19" r="5" fill="#ef4444"/>
+      <text x="404" y="24" fill="#e5e7eb">APPROVE / STOP</text>
+    </g>
+  </g>
+
+  <g transform="translate(828 92)" filter="url(#shadow)">
+    <rect width="286" height="220" rx="28" fill="#171717" stroke="#4b5563" stroke-width="3"/>
+    <rect x="31" y="32" width="224" height="112" rx="8" fill="#050505" stroke="#94a3b8" stroke-width="2"/>
+    <g fill="#facc15">
+      <circle cx="94" cy="87" r="23"/>
+      <circle cx="192" cy="87" r="23"/>
+    </g>
+    <g fill="#050505">
+      <circle cx="101" cy="88" r="8"/>
+      <circle cx="199" cy="88" r="8"/>
+    </g>
+    <path d="M128 122 143 132 158 122" fill="none" stroke="#facc15" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M69 59 111 50M175 50l42 9" stroke="#facc15" stroke-width="6" stroke-linecap="round"/>
+    <rect x="88" y="168" width="110" height="15" rx="7.5" fill="#2a2a2a"/>
+    <rect x="88" y="168" width="88" height="15" rx="7.5" fill="#ef4444"/>
+    <text x="143" y="205" text-anchor="middle" fill="#fca5a5" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">STRESS 80</text>
+    <path d="M70 220 50 286M216 220l20 66" stroke="#facc15" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <text x="1128" y="426" text-anchor="end" fill="#64748b" font-family="Arial, sans-serif" font-size="13">nRF52840 · OLED · Servo · USB Serial</text>
+</svg>
